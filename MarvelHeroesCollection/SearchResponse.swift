@@ -8,16 +8,26 @@
 import Foundation
 import UIKit
 
-struct SearchResponse {
-    var resultCount: Int
+struct HeroesResponse: Codable {
+    var data: HeroesData
+}
+
+struct HeroesData: Codable {
     var results: [Heroes]
 }
 
-
-struct Heroes {
-    var heroesName: String
+struct Heroes: Codable {
+    var name: String
     var description: String
-    var thumbnail: UIImage
-    var stories: String
-    var events: String
+    var thumbnail: Thumbnail
 }
+
+struct Thumbnail: Codable {
+    var imageURL: String
+    var imageType: String
+    
+    enum CodingKeys: String, CodingKey {
+        case imageURL = "path"
+        case imageType = "extension"
+      }
+    }
