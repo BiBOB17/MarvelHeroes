@@ -16,6 +16,8 @@
 		113A7E80278EC789004EE919 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E7F278EC789004EE919 /* SearchResponse.swift */; };
 		113A7E82278EE8CD004EE919 /* GetMd5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E81278EE8CD004EE919 /* GetMd5.swift */; };
 		113A7E84278F2042004EE919 /* NetworkHeroesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E83278F2042004EE919 /* NetworkHeroesService.swift */; };
+		113A7E8D27903657004EE919 /* HeroesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */; };
+		113A7E9427906271004EE919 /* HeroesImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E9327906271004EE919 /* HeroesImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		113A7E7F278EC789004EE919 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		113A7E81278EE8CD004EE919 /* GetMd5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMd5.swift; sourceTree = "<group>"; };
 		113A7E83278F2042004EE919 /* NetworkHeroesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeroesService.swift; sourceTree = "<group>"; };
+		113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewCell.swift; sourceTree = "<group>"; };
+		113A7E9327906271004EE919 /* HeroesImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			children = (
 				113A7E81278EE8CD004EE919 /* GetMd5.swift */,
 				113A7E83278F2042004EE919 /* NetworkHeroesService.swift */,
+				113A7E9327906271004EE919 /* HeroesImageService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -93,8 +98,9 @@
 		113A7E87278F2EF7004EE919 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				113A7E71278DD8CA004EE919 /* Main.storyboard */,
+				113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */,
 				113A7E6F278DD8CA004EE919 /* ViewController.swift */,
+				113A7E71278DD8CA004EE919 /* Main.storyboard */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -206,7 +212,9 @@
 				113A7E80278EC789004EE919 /* SearchResponse.swift in Sources */,
 				113A7E70278DD8CA004EE919 /* ViewController.swift in Sources */,
 				113A7E6C278DD8CA004EE919 /* AppDelegate.swift in Sources */,
+				113A7E8D27903657004EE919 /* HeroesCollectionViewCell.swift in Sources */,
 				113A7E6E278DD8CA004EE919 /* SceneDelegate.swift in Sources */,
+				113A7E9427906271004EE919 /* HeroesImageService.swift in Sources */,
 				113A7E84278F2042004EE919 /* NetworkHeroesService.swift in Sources */,
 				113A7E82278EE8CD004EE919 /* GetMd5.swift in Sources */,
 			);

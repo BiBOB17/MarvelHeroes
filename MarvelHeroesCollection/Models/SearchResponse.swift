@@ -31,3 +31,5 @@ struct Thumbnail: Codable {
         case imageType = "extension"
       }
     }
+
+
