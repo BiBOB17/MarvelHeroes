@@ -31,8 +31,10 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let thumbnail = allHeroes[indexPath.row].thumbnail
+        let urlImage = thumbnail.imageURL + "." +  thumbnail.imageType
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroesCollectionViewCell", for: indexPath) as! HeroesCollectionViewCell
-        cell.configure(name: allHeroes[indexPath.row].name, imageURL: "0")
+        cell.configure(name: allHeroes[indexPath.row].name, imageURL: urlImage)
         return cell
     }
 }

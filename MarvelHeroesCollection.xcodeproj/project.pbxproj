@@ -18,6 +18,7 @@
 		113A7E84278F2042004EE919 /* NetworkHeroesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E83278F2042004EE919 /* NetworkHeroesService.swift */; };
 		113A7E8D27903657004EE919 /* HeroesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */; };
 		113A7E9427906271004EE919 /* HeroesImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E9327906271004EE919 /* HeroesImageService.swift */; };
+		113A7E96279181A8004EE919 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E95279181A8004EE919 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		113A7E83278F2042004EE919 /* NetworkHeroesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeroesService.swift; sourceTree = "<group>"; };
 		113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewCell.swift; sourceTree = "<group>"; };
 		113A7E9327906271004EE919 /* HeroesImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesImageService.swift; sourceTree = "<group>"; };
+		113A7E95279181A8004EE919 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,6 @@
 				113A7E86278F2E9C004EE919 /* ApplicationLayer */,
 				113A7E8B278F2FEA004EE919 /* BuisnessLayer */,
 				113A7E8A278F2FC4004EE919 /* Models */,
-				113A7E85278F2A29004EE919 /* Networking */,
 			);
 			path = MarvelHeroesCollection;
 			sourceTree = "<group>";
@@ -90,6 +91,7 @@
 		113A7E86278F2E9C004EE919 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				113A7E95279181A8004EE919 /* UIImageView+Extension.swift */,
 				113A7E6B278DD8CA004EE919 /* AppDelegate.swift */,
 			);
 			path = ApplicationLayer;
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				113A7E6D278DD8CA004EE919 /* SceneDelegate.swift */,
+				113A7E85278F2A29004EE919 /* Networking */,
 			);
 			path = BuisnessLayer;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				113A7E80278EC789004EE919 /* SearchResponse.swift in Sources */,
+				113A7E96279181A8004EE919 /* UIImageView+Extension.swift in Sources */,
 				113A7E70278DD8CA004EE919 /* ViewController.swift in Sources */,
 				113A7E6C278DD8CA004EE919 /* AppDelegate.swift in Sources */,
 				113A7E8D27903657004EE919 /* HeroesCollectionViewCell.swift in Sources */,
