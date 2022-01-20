@@ -8,11 +8,11 @@ final class NetworkHeroesService {
    
     private init() {}
     
-    func request(completion: @escaping (Result<HeroesResponse, Error>) -> Void) {
+    func request(offset: Int, completion: @escaping (Result<HeroesResponse, Error>) -> Void) {
         let ts = NSDate().timeIntervalSince1970
         let hashmd5 = Md5().getMd5(string: "\(ts)\(privatekey)\(publickey)")
         let hashValueHex = hashmd5.map {String(format: "%02hhx", $0) }.joined()
-        let urlString = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-name&ts=\(ts)&apikey=\(publickey)&hash=\(hashValueHex)"
+        let urlString = "https://gateway.marvel.com:443/v1/public/characters?orderBy=-name&offset=\(String(offset))&ts=\(ts)&apikey=\(publickey)&hash=\(hashValueHex)"
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async {

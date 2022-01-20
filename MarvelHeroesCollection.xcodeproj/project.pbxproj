@@ -19,6 +19,8 @@
 		113A7E8D27903657004EE919 /* HeroesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */; };
 		113A7E9427906271004EE919 /* HeroesImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E9327906271004EE919 /* HeroesImageService.swift */; };
 		113A7E96279181A8004EE919 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E95279181A8004EE919 /* UIImageView+Extension.swift */; };
+		113A7E98279567E9004EE919 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E97279567E9004EE919 /* ViewController+Extension.swift */; };
+		113A7EA427996BF0004EE919 /* FooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewCell.swift; sourceTree = "<group>"; };
 		113A7E9327906271004EE919 /* HeroesImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesImageService.swift; sourceTree = "<group>"; };
 		113A7E95279181A8004EE919 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		113A7E97279567E9004EE919 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		113A7E5F278DD8CA004EE919 = {
 			isa = PBXGroup;
 			children = (
+				113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */,
 				113A7E6A278DD8CA004EE919 /* MarvelHeroesCollection */,
 				113A7E69278DD8CA004EE919 /* Products */,
 			);
@@ -102,6 +107,7 @@
 			children = (
 				113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */,
 				113A7E6F278DD8CA004EE919 /* ViewController.swift */,
+				113A7E97279567E9004EE919 /* ViewController+Extension.swift */,
 				113A7E71278DD8CA004EE919 /* Main.storyboard */,
 			);
 			path = PresentationLayer;
@@ -215,11 +221,13 @@
 				113A7E80278EC789004EE919 /* SearchResponse.swift in Sources */,
 				113A7E96279181A8004EE919 /* UIImageView+Extension.swift in Sources */,
 				113A7E70278DD8CA004EE919 /* ViewController.swift in Sources */,
+				113A7EA427996BF0004EE919 /* FooterCollectionReusableView.swift in Sources */,
 				113A7E6C278DD8CA004EE919 /* AppDelegate.swift in Sources */,
 				113A7E8D27903657004EE919 /* HeroesCollectionViewCell.swift in Sources */,
 				113A7E6E278DD8CA004EE919 /* SceneDelegate.swift in Sources */,
 				113A7E9427906271004EE919 /* HeroesImageService.swift in Sources */,
 				113A7E84278F2042004EE919 /* NetworkHeroesService.swift in Sources */,
+				113A7E98279567E9004EE919 /* ViewController+Extension.swift in Sources */,
 				113A7E82278EE8CD004EE919 /* GetMd5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,15 @@ final class HeroesCollectionViewCell: UICollectionViewCell {
     func configure(name: String, imageURL: String) {
         heroesImageView.loadImage(from: imageURL)
         titleLabel.text = name
+        setupUI()
+    }
+    
+    private func setupUI() {
+        heroesImageView.layer.cornerRadius = 8.0
+        heroesImageView.clipsToBounds = true
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 8
+        
     }
 }
 
