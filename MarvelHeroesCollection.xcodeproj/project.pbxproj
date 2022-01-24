@@ -56,7 +56,6 @@
 		113A7E5F278DD8CA004EE919 = {
 			isa = PBXGroup;
 			children = (
-				113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */,
 				113A7E6A278DD8CA004EE919 /* MarvelHeroesCollection */,
 				113A7E69278DD8CA004EE919 /* Products */,
 			);
@@ -105,6 +104,7 @@
 		113A7E87278F2EF7004EE919 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */,
 				113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */,
 				113A7E6F278DD8CA004EE919 /* ViewController.swift */,
 				113A7E97279567E9004EE919 /* ViewController+Extension.swift */,
