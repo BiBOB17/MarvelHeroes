@@ -1,11 +1,13 @@
 import UIKit
 import Foundation
+import SwiftUI
 
 final class ViewController: UIViewController {
     @IBOutlet private weak var heroesCollectionView: UICollectionView!
     
     private let networkHeroesService = NetworkHeroesService.shared
     private let searchController = UISearchController(searchResultsController: nil)
+    var filteredHeroes = [Heroes]()
     var allHeroes = [Heroes]()
     var spinner = FooterCollectionReusableView()
     
@@ -15,6 +17,11 @@ final class ViewController: UIViewController {
         heroesCollectionView.delegate = self
         heroesCollectionView.dataSource = self
         loadData()
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     private func loadData() {
@@ -22,6 +29,7 @@ final class ViewController: UIViewController {
             switch result {
             case .success(let searchResponse):
                 self.allHeroes.append(contentsOf: searchResponse.data.results)
+                self.filteredHeroes = self.allHeroes
                 self.heroesCollectionView.reloadData()
             case .failure(let error):
                 print(error)
@@ -43,14 +51,15 @@ final class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allHeroes.count
+        
+        return filteredHeroes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let thumbnail = allHeroes[indexPath.row].thumbnail
+        let thumbnail = filteredHeroes[indexPath.row].thumbnail
         let urlImage = thumbnail.imageURL + "." +  thumbnail.imageType
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroesCollectionViewCell", for: indexPath) as! HeroesCollectionViewCell
-        cell.configure(name: allHeroes[indexPath.row].name, imageURL: urlImage)
+        cell.configure(name: filteredHeroes[indexPath.row].name, imageURL: urlImage)
         
         return cell
     }
@@ -58,7 +67,6 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(allHeroes[indexPath.row].name)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -81,5 +89,23 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: 8, bottom: 8, right: 8)
     }
 }
+
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        guard !searchText.isEmpty else {
+            filteredHeroes = allHeroes
+            heroesCollectionView.reloadData()
+            return
+        }
+        
+        filteredHeroes = allHeroes.filter({ $0.name.lowercased().contains(searchText.lowercased())})
+        heroesCollectionView.reloadData()
+    }
+}
+
 
 

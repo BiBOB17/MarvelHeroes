@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="luA-Yx-oiD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xuU-D0-Dyx">
+            <objects>
+                <navigationController id="luA-Yx-oiD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xae-TK-pCa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zPb-OE-YZV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCq-JS-hnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-878" y="98"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rxs-Hu-S5O">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" red="0.96848052740097046" green="0.72103464213381041" blue="0.87273771748733164" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pi8-ST-0re">
                                     <size key="itemSize" width="160" height="172"/>
@@ -61,6 +77,7 @@
                                         <connections>
                                             <outlet property="heroesImageView" destination="65b-iY-ccQ" id="v5m-nH-Hpx"/>
                                             <outlet property="titleLabel" destination="eAd-K6-m8q" id="JvD-oP-EcD"/>
+                                            <segue destination="UkE-wz-yyx" kind="show" id="pEN-U5-Pk9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -92,13 +109,60 @@
                             <constraint firstItem="rxs-Hu-S5O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xX4-Pi-5fP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a6p-xM-ibt"/>
                     <connections>
                         <outlet property="heroesCollectionView" destination="rxs-Hu-S5O" id="zrN-YO-8S2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+            <point key="canvasLocation" x="35" y="98"/>
+        </scene>
+        <!--Detail Heroes View-->
+        <scene sceneID="HiX-Dc-ub7">
+            <objects>
+                <viewController id="UkE-wz-yyx" customClass="DetailHeroesView" customModule="MarvelHeroesCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9sn-9h-kfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-zN-vtO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEG-8E-HUK">
+                                <rect key="frame" x="87" y="134" width="240" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvS-7j-2wr">
+                                <rect key="frame" x="20" y="387" width="374" height="475"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o2J-k9-7Pe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="descriptionHeroes" destination="nvS-7j-2wr" id="965-pF-Ne3"/>
+                            <outlet property="heroesName" destination="4DB-zN-vtO" id="U2w-Dy-y1T"/>
+                            <outlet property="imageHero" destination="MEG-8E-HUK" id="6j8-gy-IEy"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="DiA-sW-Hrl"/>
+                    <connections>
+                        <outlet property="descriptionHeroes" destination="nvS-7j-2wr" id="yVC-9D-gVS"/>
+                        <outlet property="heroesName" destination="4DB-zN-vtO" id="YbW-Lb-KZq"/>
+                        <outlet property="imageHero" destination="MEG-8E-HUK" id="LbK-4a-NDZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cgr-IQ-uoX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="98"/>
         </scene>
     </scenes>
     <resources>
