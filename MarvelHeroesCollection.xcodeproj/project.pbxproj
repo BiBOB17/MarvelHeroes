@@ -21,7 +21,8 @@
 		113A7E96279181A8004EE919 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E95279181A8004EE919 /* UIImageView+Extension.swift */; };
 		113A7E98279567E9004EE919 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7E97279567E9004EE919 /* ViewController+Extension.swift */; };
 		113A7EA427996BF0004EE919 /* FooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */; };
-		113A7EA627A007E2004EE919 /* DetailHeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7EA527A007E2004EE919 /* DetailHeroesView.swift */; };
+		113A7EA827A3F95E004EE919 /* AppConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7EA727A3F95E004EE919 /* AppConstans.swift */; };
+		113A7EAC27A444A6004EE919 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A7EAB27A444A6004EE919 /* HeroDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		113A7E95279181A8004EE919 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		113A7E97279567E9004EE919 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionReusableView.swift; sourceTree = "<group>"; };
-		113A7EA527A007E2004EE919 /* DetailHeroesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeroesView.swift; sourceTree = "<group>"; };
+		113A7EA727A3F95E004EE919 /* AppConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstans.swift; sourceTree = "<group>"; };
+		113A7EAB27A444A6004EE919 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		113A7E86278F2E9C004EE919 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				113A7EA727A3F95E004EE919 /* AppConstans.swift */,
 				113A7E95279181A8004EE919 /* UIImageView+Extension.swift */,
 				113A7E6B278DD8CA004EE919 /* AppDelegate.swift */,
 			);
@@ -106,8 +109,8 @@
 		113A7E87278F2EF7004EE919 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				113A7EA527A007E2004EE919 /* DetailHeroesView.swift */,
 				113A7EA327996BF0004EE919 /* FooterCollectionReusableView.swift */,
+				113A7EAB27A444A6004EE919 /* HeroDetailViewController.swift */,
 				113A7E8C27903657004EE919 /* HeroesCollectionViewCell.swift */,
 				113A7E6F278DD8CA004EE919 /* ViewController.swift */,
 				113A7E97279567E9004EE919 /* ViewController+Extension.swift */,
@@ -227,9 +230,10 @@
 				113A7EA427996BF0004EE919 /* FooterCollectionReusableView.swift in Sources */,
 				113A7E6C278DD8CA004EE919 /* AppDelegate.swift in Sources */,
 				113A7E8D27903657004EE919 /* HeroesCollectionViewCell.swift in Sources */,
+				113A7EA827A3F95E004EE919 /* AppConstans.swift in Sources */,
 				113A7E6E278DD8CA004EE919 /* SceneDelegate.swift in Sources */,
 				113A7E9427906271004EE919 /* HeroesImageService.swift in Sources */,
-				113A7EA627A007E2004EE919 /* DetailHeroesView.swift in Sources */,
+				113A7EAC27A444A6004EE919 /* HeroDetailViewController.swift in Sources */,
 				113A7E84278F2042004EE919 /* NetworkHeroesService.swift in Sources */,
 				113A7E98279567E9004EE919 /* ViewController+Extension.swift in Sources */,
 				113A7E82278EE8CD004EE919 /* GetMd5.swift in Sources */,
@@ -309,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -77,7 +77,6 @@
                                         <connections>
                                             <outlet property="heroesImageView" destination="65b-iY-ccQ" id="v5m-nH-Hpx"/>
                                             <outlet property="titleLabel" destination="eAd-K6-m8q" id="JvD-oP-EcD"/>
-                                            <segue destination="UkE-wz-yyx" kind="show" id="pEN-U5-Pk9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -118,11 +117,11 @@
             </objects>
             <point key="canvasLocation" x="35" y="98"/>
         </scene>
-        <!--Detail Heroes View-->
+        <!--Hero Detail View Controller-->
         <scene sceneID="HiX-Dc-ub7">
             <objects>
-                <viewController id="UkE-wz-yyx" customClass="DetailHeroesView" customModule="MarvelHeroesCollection" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9sn-9h-kfn">
+                <viewController storyboardIdentifier="DetailHeroesView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UkE-wz-yyx" customClass="HeroDetailViewController" customModule="MarvelHeroesCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="DetailHeroesView" id="9sn-9h-kfn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -147,11 +146,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o2J-k9-7Pe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="descriptionHeroes" destination="nvS-7j-2wr" id="965-pF-Ne3"/>
-                            <outlet property="heroesName" destination="4DB-zN-vtO" id="U2w-Dy-y1T"/>
-                            <outlet property="imageHero" destination="MEG-8E-HUK" id="6j8-gy-IEy"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="DiA-sW-Hrl"/>
                     <connections>

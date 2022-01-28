@@ -1,6 +1,9 @@
 import UIKit
 
 final class HeroesCollectionViewCell: UICollectionViewCell {
+    private enum Constants {
+        static let cornerRadius: CGFloat = 8
+    }
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var heroesImageView: UIImageView!
@@ -12,10 +15,10 @@ final class HeroesCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        heroesImageView.layer.cornerRadius = 8.0
+        heroesImageView.layer.cornerRadius = Constants.cornerRadius
         heroesImageView.clipsToBounds = true
         self.clipsToBounds = true
-        self.layer.cornerRadius = 8
+        self.layer.cornerRadius = Constants.cornerRadius
         
     }
 }
