@@ -4,6 +4,7 @@ import SwiftUI
 
 final class ViewController: UIViewController {
     private enum Constants {
+        static let newViewName = "DetailHeroesView"
         static let cellIdentifier = "HeroesCollectionViewCell"
         static let footerIdentifier = "footer"
         static let edgeInset: CGFloat = 8
@@ -55,7 +56,7 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DetailHeroesView") as? HeroDetailViewController else { return }
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: Constants.newViewName) as? HeroDetailViewController else { return }
         viewController.hero = filteredHeroes[indexPath.row]
         self.navigationController?.pushViewController(viewController, animated: true)
     }

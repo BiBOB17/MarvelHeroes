@@ -1,6 +1,6 @@
 import UIKit
 
-class HeroDetailViewController: UIViewController {
+final class HeroDetailViewController: UIViewController {
     @IBOutlet private weak var imageHero: UIImageView!
     @IBOutlet private weak var heroesName: UILabel!
     @IBOutlet private weak var descriptionHeroes: UILabel!
